@@ -1,0 +1,13 @@
+# 줄바꿈 규칙: 윈도우 실행 파일은 CRLF, 나머지는 LF
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+package/*.txt text eol=crlf
+*.json text eol=lf
+*.md   text eol=lf
+*.py   text eol=lf
+*.yml  text eol=lf
+translation/font_charset.txt text eol=lf
+*.xlsx binary
+*.zip  binary
+*.yytex binary
+*.png  binary

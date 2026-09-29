@@ -1,0 +1,1694 @@
+{
+ "version": 2,
+ "style": [
+  "카드·유물 설명은 '~합니다'체로 짧게 씁니다. 예: Deal #a damage. → 피해를 #a 줍니다.",
+  "수치가 붙는 키워드는 '키워드 N' 순서를 유지합니다. 예: Apply Vulnerable 2 → 취약 2 부여 / Block 5 → 방어도 5",
+  "[k]…[/k] 등 모든 태그와 #a, {name}, [0] 같은 자리표시자는 그대로 둡니다. 태그 안의 단어만 번역합니다.",
+  "고유명사(카드·유물·몬스터 이름)는 뜻을 살려 번역하고, 이름이 설명문에 나오면 용어집 표기와 똑같이 씁니다.",
+  "폰트에 없는 글자(한자·가나·악센트 문자 등)는 쓰지 않습니다.",
+  "UI 버튼·메뉴는 명사형으로 짧게 씁니다. 예: New Game → 새 게임"
+ ],
+ "terms": [
+  {
+   "cat": "자원·시스템",
+   "en": "Energy",
+   "ko": "에너지",
+   "note": "카드 사용 비용. 남은 에너지는 다음 턴으로 이월",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Max Energy",
+   "ko": "최대 에너지",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Threat",
+   "ko": "위협",
+   "note": "이 게임 고유 개념: 적 공격이 위협으로 쌓이고, 턴 종료 시 남은 위협만큼 체력 감소",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "HP / Max HP",
+   "ko": "체력 / 최대 체력",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "AP (Attack Power)",
+   "ko": "공격력",
+   "note": "적 원형 아이콘 수치. 툴팁 제목은 '공격력 (AP)'",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Frenzy",
+   "ko": "연타",
+   "note": "적의 공격 횟수",
+   "review": false,
+   "decision": "대안 채택: '연타 3', '연타 1 감소'처럼 뜻이 바로 읽힘"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Purge",
+   "ko": "소각",
+   "note": "카드를 버려 에너지 +1. 타락이 쌓임. 대안: 정화(단, Cleanse와 겹침)",
+   "review": false,
+   "decision": "초안 유지: '정화'는 Cleanse와 겹침"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Essence",
+   "ko": "정수",
+   "note": "주 화폐",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Soul / Souls",
+   "ko": "영혼",
+   "note": "두 번째 화폐",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Void",
+   "ko": "공허",
+   "note": "게임 전체의 핵심 단어",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "The Void",
+   "ko": "공허",
+   "note": "최종 보스이자 세계관 명칭",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Void Stone",
+   "ko": "공허석",
+   "note": "카드에 끼우는 강화석",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Void Points",
+   "ko": "공허 점수",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Void Coin",
+   "ko": "공허 주화",
+   "note": "카드 이름",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Artifact",
+   "ko": "유물",
+   "note": "대안: 아티팩트",
+   "review": false,
+   "decision": "초안 유지: 국내 로그라이크에서 익숙한 표기"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Upgrade / Upgraded",
+   "ko": "강화 / 강화된",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Upgrade Point",
+   "ko": "강화 포인트",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Potion",
+   "ko": "포션",
+   "note": "대안: 물약",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Brew / Belt",
+   "ko": "양조 / 벨트",
+   "note": "포션 장착 슬롯 두 종류",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Spell / Spellbook",
+   "ko": "주문 / 주문서",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Cooldown",
+   "ko": "재사용 대기",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Deck",
+   "ko": "덱",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Hand",
+   "ko": "손패",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Discard (pile)",
+   "ko": "버린 카드 더미",
+   "note": "키워드 Discard(버리기)와 구분",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Expel pile",
+   "ko": "추방 더미",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Backpack",
+   "ko": "배낭",
+   "note": "덱에 넣지 않은 카드 보관함",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Deck Manager",
+   "ko": "덱 관리",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Instability",
+   "ko": "불안정",
+   "note": "난이도 조정 옵션. '불안정 설정', '최대 불안정'",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Mastery",
+   "ko": "숙련",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Compendium",
+   "ko": "도감",
+   "note": "테스트 패치에서 사용 중",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Unlocks",
+   "ko": "해금",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Challenge Coins",
+   "ko": "도전 코인",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Daily Draft",
+   "ko": "일일 드래프트",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Booster Pack",
+   "ko": "부스터 팩",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Card Back / Deckback",
+   "ko": "카드 뒷면",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Alternative Artwork",
+   "ko": "대체 일러스트",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Battlefield",
+   "ko": "전장",
+   "note": "전투 배경 선택",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Purge Effect",
+   "ko": "소각 효과",
+   "note": "소각 연출 선택",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Achievement",
+   "ko": "업적",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Perfect Victory",
+   "ko": "완벽한 승리",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Victory / Defeat",
+   "ko": "승리 / 패배",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Battle Progress",
+   "ko": "전투 진행도",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Floor / Room",
+   "ko": "층 / 방",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Map",
+   "ko": "지도",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Run",
+   "ko": "도전",
+   "note": "한 판의 플레이. '현재 도전', '도전 기록'",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Seed",
+   "ko": "시드",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Round / Turn",
+   "ko": "라운드 / 턴",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "End Turn",
+   "ko": "턴 종료",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Combat Log",
+   "ko": "전투 기록",
+   "note": "테스트 패치에서 사용 중",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Debuff / Debuffs",
+   "ko": "디버프",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Cleanse",
+   "ko": "정화",
+   "note": "디버프 제거",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Heal",
+   "ko": "회복",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Damage",
+   "ko": "피해",
+   "note": "'피해를 N 줍니다'",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Enemy / Creature",
+   "ko": "적 / 생명체",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Minion",
+   "ko": "하수인",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Elite",
+   "ko": "엘리트",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Guardian",
+   "ko": "수호자",
+   "note": "층 보스",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Vault Guardian",
+   "ko": "금고 수호자",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Fervour",
+   "ko": "신앙심",
+   "note": "폭풍 전용 재화. 이단 거점에서 획득",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Zeal",
+   "ko": "열정",
+   "note": "폭풍 전용 게이지. 에너지를 쓸수록 상승",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Zeal Powers / Abilities",
+   "ko": "열정 권능",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Zeal Tree",
+   "ko": "열정 트리",
+   "note": "대안: 열정 트리",
+   "review": false,
+   "decision": "대안 채택: 성장 트리 UI라 '트리'가 더 알아보기 쉬움"
+  },
+  {
+   "cat": "자원·시스템",
+   "en": "Heretic Site",
+   "ko": "이단 거점",
+   "note": "Shrine(성소)과 구분",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Block",
+   "ko": "방어도",
+   "note": "위협을 줄임. 가장 많이 나오는 용어(344회)",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Delay Block",
+   "ko": "지연 방어도",
+   "note": "다음 턴 시작 시 방어도",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Expel",
+   "ko": "추방",
+   "note": "이번 전투에서 제거",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Destroy",
+   "ko": "파괴",
+   "note": "버린 카드로 가는 대신 영구 제거",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Discard",
+   "ko": "버리기",
+   "note": "카드를 버린 카드 더미로 보냄",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Draw",
+   "ko": "뽑기",
+   "note": "'카드를 N장 뽑습니다'",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Delay Draw",
+   "ko": "지연 뽑기",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Bleed / Bleeding",
+   "ko": "출혈",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Clot",
+   "ko": "응고",
+   "note": "대상의 출혈을 N 소모",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Vulnerable",
+   "ko": "취약",
+   "note": "받는 피해 50% 증가",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Weak",
+   "ko": "약화",
+   "note": "공격력 25% 감소",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Slow",
+   "ko": "둔화",
+   "note": "연타 감소",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Stun",
+   "ko": "기절",
+   "note": "다음 턴 에너지 감소",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Cripple",
+   "ko": "위축",
+   "note": "다음 턴 뽑는 카드 수 감소. 대안: 쇠약",
+   "review": false,
+   "decision": "초안 유지: '쇠약'은 약화(Weak)와 헷갈림"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Confusion",
+   "ko": "혼란",
+   "note": "카드 비용 증가",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Fear",
+   "ko": "공포",
+   "note": "뽑은 뒤 그 수만큼 버림",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Hex",
+   "ko": "저주",
+   "note": "다음에 낸 카드가 사용되지 않고 버려짐",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Haunted",
+   "ko": "홀림",
+   "note": "공허석 효과 발동 안 됨",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Poison",
+   "ko": "중독",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Burning",
+   "ko": "화상",
+   "note": "턴 시작 시 위협 추가, 소각하면 감소",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Fumble",
+   "ko": "헛손질",
+   "note": "다음 N장 뽑을 때 휘발성 사본으로 바뀜",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Permanent",
+   "ko": "영구",
+   "note": "덱에서 제거 불가, 덱 공간 차지 안 함",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Volatile",
+   "ko": "휘발성",
+   "note": "소각 불가, 사용·버림·턴 종료 시 파괴",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Unplayable",
+   "ko": "사용 불가",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Scrap",
+   "ko": "스크랩",
+   "note": "적 턴 종료 시 자동으로 버려짐",
+   "review": false,
+   "decision": "대안 채택: '잔해'는 자동 버림 효과가 연상되지 않음"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Rigged / Rig",
+   "ko": "조작됨 / 조작",
+   "note": "전투 시작·덱 섞을 때 덱 맨 위에 놓임",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Overcharge",
+   "ko": "과충전",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Discharge",
+   "ko": "방전",
+   "note": "과충전 N 소모",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Shock",
+   "ko": "감전",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Trigger / Triggers",
+   "ko": "발동",
+   "note": "'N회 추가 발동'",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Rebound",
+   "ko": "되돌림",
+   "note": "턴 중 처음 사용하면 손으로 돌아옴",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Swift",
+   "ko": "신속",
+   "note": "콤보만큼 추가 발동",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Combo",
+   "ko": "콤보",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Balanced",
+   "ko": "균형",
+   "note": "콤보 효과를 받지만 소모하지 않음",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Heavy",
+   "ko": "중량",
+   "note": "카드 분류 태그",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Spider / Spiders",
+   "ko": "거미",
+   "note": "카드 분류 태그",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Recur",
+   "ko": "회수",
+   "note": "버린 카드 더미에서 손으로",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Slay",
+   "ko": "처치",
+   "note": "이 카드로 적을 죽이면 발동",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Sift",
+   "ko": "선별",
+   "note": "덱에서 카드 1장을 버림",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Opener",
+   "ko": "선공",
+   "note": "턴의 첫 카드일 때 발동",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Clone",
+   "ko": "복제",
+   "note": "사본을 버린 카드 더미에 추가",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Ghost",
+   "ko": "환영",
+   "note": "휘발성 사본을 손에 추가. Vision(계시)과 구분",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Loop",
+   "ko": "순환",
+   "note": "덱에 섞여 들어감",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Cycle",
+   "ko": "사이클",
+   "note": "이번 턴 카드를 낼 때마다 1장 뽑음",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Set Up",
+   "ko": "준비",
+   "note": "다음에 낸 카드가 덱 맨 위로",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "X / X Cost",
+   "ko": "X / X 비용",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Rage",
+   "ko": "분노",
+   "note": "공격 카드 피해 % 증가. 7대 죄악 Wrath(진노)와 구분",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Delay Rage",
+   "ko": "지연 분노",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Attack Action / Attacking",
+   "ko": "공격 행동 / 공격 중",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Consumable",
+   "ko": "소모품",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Corruption",
+   "ko": "타락",
+   "note": "공허의 딸 핵심 수치",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Corruption Lock",
+   "ko": "타락 봉인",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Soultithe",
+   "ko": "영혼 십일조",
+   "note": "대안: 영혼세",
+   "review": false,
+   "decision": "초안 유지: '영혼세'는 카드 Soultax 이름으로 씀"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Threshold",
+   "ko": "임계",
+   "note": "영혼 십일조가 N 이상이면",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Death Strike",
+   "ko": "죽음의 일격",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Future Strike",
+   "ko": "미래 일격",
+   "note": "짝수 턴 끝에 피해",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Fatigue / Fatigued",
+   "ko": "피로 / 피로함",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Foresight",
+   "ko": "예지",
+   "note": "카드 비용을 사용할 때까지 0으로",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Foresee / Foreseen",
+   "ko": "예지하기 / 예지됨",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Vision",
+   "ko": "계시",
+   "note": "버린 카드 1장을 덱 맨 위로",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Rewind",
+   "ko": "되감기",
+   "note": "대상의 행동을 이전 턴 것으로 되돌림",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Chain",
+   "ko": "연계",
+   "note": "같은 종류 카드 연속 사용",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Follow-Up",
+   "ko": "후속",
+   "note": "연계가 카드 종류와 맞으면 발동",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Zen / Zen State",
+   "ko": "무아 / 무아 상태",
+   "note": "연계 3에서 진입, 카드 비용 -1",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Desync",
+   "ko": "엇박자",
+   "note": "연계에 더하거나 끊지 않음",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Solo",
+   "ko": "단독",
+   "note": "대상이 유일한 생존 적일 때",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Shii",
+   "ko": "시이",
+   "note": "고유 명칭(음역). 적 체력을 넘으면 즉사",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Echo Wall",
+   "ko": "메아리 벽",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Inert",
+   "ko": "둔감",
+   "note": "공허석이 턴당 1회만 발동",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Fortitude",
+   "ko": "강인함",
+   "note": "먼저 깎이는 보호막 성격",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Stealth",
+   "ko": "은신",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Taunt",
+   "ko": "도발",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Evasive",
+   "ko": "회피",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Immune",
+   "ko": "면역",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Weave / Woven",
+   "ko": "엮기 / 엮인",
+   "note": "펫을 보드에 소환",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Unravel / Unravelled",
+   "ko": "풀기 / 풀린",
+   "note": "펫을 보드에서 제거",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Sluggish",
+   "ko": "굼뜸",
+   "note": "엮었을 때 행동하지 않음",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Infest",
+   "ko": "기생",
+   "note": "적에게 카운트다운 효과 부여",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Foster",
+   "ko": "양육",
+   "note": "직조자 누적 수치",
+   "review": false,
+   "decision": "수정: 직조자의 누적 수치(Foster N). 덱 Nurture는 '보살핌'이라 겹치지 않음"
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Fetch!",
+   "ko": "물어와!",
+   "note": "입양한 강아지 유물",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Blessed Shield",
+   "ko": "축복받은 방패",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Congeal / Amplify / Tranquilize",
+   "ko": "응결 / 증폭 / 진정",
+   "note": "초과 방어도만큼 출혈·감전·시이 부여",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "키워드 (카드 효과)",
+   "en": "Apply (debuff)",
+   "ko": "부여",
+   "note": "'취약 2 부여'",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Attack (card)",
+   "ko": "공격",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Ability (card)",
+   "ko": "능력",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Buff (card)",
+   "ko": "버프",
+   "note": "전투 내내 지속되는 효과 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Affliction / Afflictions",
+   "ko": "고난",
+   "note": "부정적 카드(공허·재앙·현기증)",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Pet (card)",
+   "ko": "펫",
+   "note": "대안: 소환수",
+   "review": false,
+   "decision": "초안 유지: 카드 종류 표시라 짧은 쪽"
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Common",
+   "ko": "일반",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Uncommon",
+   "ko": "고급",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Rare",
+   "ko": "희귀",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Elite (rarity)",
+   "ko": "엘리트",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Item",
+   "ko": "아이템",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Unknown",
+   "ko": "알 수 없음",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Class / Neutral",
+   "ko": "직업 / 공용",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Introduction",
+   "ko": "입문",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Normal",
+   "ko": "보통",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Hard",
+   "ko": "어려움",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Impossible / Impossible+",
+   "ko": "불가능 / 불가능+",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Imp / Imp+",
+   "ko": "불가 / 불가+",
+   "note": "Impossible의 약칭",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Nightmare",
+   "ko": "악몽",
+   "note": "모드 이름",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Daze",
+   "ko": "현기증",
+   "note": "고난 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Bane",
+   "ko": "재앙",
+   "note": "고난 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Void (card)",
+   "ko": "공허",
+   "note": "고난 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Exhaustion",
+   "ko": "탈진",
+   "note": "고난 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "카드 종류·희귀도·난이도",
+   "en": "Infection",
+   "ko": "감염",
+   "note": "고난 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "The Hidden",
+   "ko": "은신자",
+   "note": "대안: 숨은 자",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Daughter of the Void",
+   "ko": "공허의 딸",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "The Enlightened",
+   "ko": "깨달은 자",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "The Tempest",
+   "ko": "템페스트",
+   "note": "",
+   "review": false,
+   "decision": "대안 채택: '폭풍'은 천둥·번개 덱 이름과 섞임"
+  },
+  {
+   "cat": "직업·덱",
+   "en": "The Weaver",
+   "ko": "직조자",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Bleed / Blade / Trickster",
+   "ko": "출혈 / 칼날 / 책략가",
+   "note": "은신자 덱",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Corruption / Sacrifice / Avarice",
+   "ko": "타락 / 희생 / 물욕",
+   "note": "공허의 딸 덱. Avarice는 죄악 Greed(탐욕)와 구분",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Martial / Mindfulness / Samsara",
+   "ko": "무술 / 마음챙김 / 윤회",
+   "note": "깨달은 자 덱",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Thunder / Lightning / Tempo",
+   "ko": "천둥 / 번개 / 템포",
+   "note": "폭풍 덱",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Nurture / Swarm / Infest",
+   "ko": "보살핌 / 무리 / 기생",
+   "note": "직조자 덱",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Hidden Blade",
+   "ko": "숨겨진 칼날",
+   "note": "은신자 카드",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Silent Shiv",
+   "ko": "소리 없는 단검",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "직업·덱",
+   "en": "Spiderling / Swifterling",
+   "ko": "새끼 거미 / 날쌘 새끼 거미",
+   "note": "직조자 펫",
+   "review": false,
+   "decision": "초안 유지"
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Mob Room",
+   "ko": "일반 전투",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Shrine",
+   "ko": "성소",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Merchant",
+   "ko": "상인",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Soul Collector",
+   "ko": "영혼 수집가",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Treasure / Artifact Treasure",
+   "ko": "보물 / 유물 보물",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Secret Room",
+   "ko": "비밀의 방",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "The Raven's Gift",
+   "ko": "까마귀의 선물",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "The Spell Child",
+   "ko": "주문술사 소년",
+   "note": "",
+   "review": false,
+   "decision": "대안 채택: 설명이 '친절한 어린 소년'"
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Class Trainer",
+   "ko": "직업 교관",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Stone Smith",
+   "ko": "석공",
+   "note": "공허석 판매 NPC",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Dark Mime",
+   "ko": "어둠의 마임",
+   "note": "",
+   "review": false,
+   "decision": "대안 채택: 흉내(복제) 능력이 드러남"
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "The Dark Idol",
+   "ko": "어둠의 우상",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Purveyor of Potions",
+   "ko": "포션 상인",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "The Disheveled Salesman",
+   "ko": "초라한 행상인",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Lost and Found",
+   "ko": "분실물 보관소",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Blood Library",
+   "ko": "피의 서고",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Reflections of Sin",
+   "ko": "죄의 반영",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Queen",
+   "ko": "여왕",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Matron of Memories",
+   "ko": "기억의 수녀원장",
+   "note": "",
+   "review": false,
+   "decision": "대안 채택"
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "Well of Stars",
+   "ko": "별의 우물",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "장소·NPC",
+   "en": "The Vault",
+   "ko": "금고",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Lust",
+   "ko": "색욕",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Gluttony",
+   "ko": "식탐",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Greed",
+   "ko": "탐욕",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Sloth",
+   "ko": "나태",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Wrath",
+   "ko": "진노",
+   "note": "키워드 Rage(분노)와 겹치지 않게",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Pride",
+   "ko": "교만",
+   "note": "",
+   "review": false,
+   "decision": ""
+  },
+  {
+   "cat": "7대 죄악",
+   "en": "Envy",
+   "ko": "질투",
+   "note": "",
+   "review": false,
+   "decision": ""
+  }
+ ],
+ "status": "confirmed 2026-09-29 — flagged items decided by Claude at AOS's request"
+}

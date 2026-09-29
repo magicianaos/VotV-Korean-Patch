@@ -1,0 +1,41 @@
+name: 번역 수정 제안
+description: 오역, 어색한 문장, 칸을 넘치는 문장을 알려 주세요.
+title: "[번역] "
+labels: ["번역"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        고맙습니다! 한 이슈에 여러 문장을 적어도 됩니다.
+        많이 고치실 때는 검수 엑셀(KR_translation_review.xlsx)의 '수정안' 칸을 채워 아래 '스크린샷·파일' 칸에 첨부해 주세요.
+  - type: input
+    id: where
+    attributes:
+      label: 어디에 나오나요?
+      description: 카드·유물 이름이나 화면 이름 (예. 카드 '베기'의 강화 설명, 설정 화면)
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 현재 번역
+      description: 게임에 나오는 지금 문장
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 수정안
+      description: "[k]…[/k] 같은 대괄호 표시와 #a, {name} 같은 기호는 그대로 두세요."
+    validations:
+      required: false
+  - type: textarea
+    id: reason
+    attributes:
+      label: 이유
+      description: 예. 뜻이 반대임 / 카드 칸을 넘침 / 용어가 다른 곳과 다름
+  - type: textarea
+    id: shots
+    attributes:
+      label: 스크린샷·파일
+      description: 이미지나 엑셀 파일을 여기로 끌어다 놓으면 첨부됩니다.

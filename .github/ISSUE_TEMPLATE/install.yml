@@ -1,0 +1,35 @@
+name: 설치 문제
+description: 설치·제거가 안 되거나, 글자가 깨지거나, 게임이 이상할 때
+title: "[설치] "
+labels: ["설치"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 패치 버전
+      placeholder: 예. v1.0
+    validations:
+      required: true
+  - type: input
+    id: gamedir
+    attributes:
+      label: 게임 설치 위치
+      placeholder: 예. D:\SteamLibrary\steamapps\common\Vault of the Void
+  - type: textarea
+    id: what
+    attributes:
+      label: 어떤 문제인가요?
+      description: 무엇을 했을 때 어떻게 되었는지 적어 주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: 설치 창에 나온 메시지
+      description: 검은 설치 창의 내용을 복사해 붙여 넣어 주세요.
+      render: text
+  - type: textarea
+    id: shots
+    attributes:
+      label: 스크린샷
+      description: 이미지를 여기로 끌어다 놓으면 첨부됩니다.

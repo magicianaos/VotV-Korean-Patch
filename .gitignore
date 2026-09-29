@@ -1,0 +1,12 @@
+# 폰트·배포 압축은 Releases에만 올립니다
+package/patch/
+*.zip
+*.yytex
+
+# 작업 중 생기는 파일
+__pycache__/
+*.pyc
+~$*.xlsx
+Thumbs.db
+desktop.ini
+.DS_Store
